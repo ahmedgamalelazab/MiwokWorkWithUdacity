@@ -28,19 +28,19 @@ public class PhrasesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phrases);
 
-        ArrayList<vocabulary>Pharsesvoc = new ArrayList<vocabulary>();
-        Pharsesvoc.add(new vocabulary("Where are you going ?","minto wuksus ?"));
-        Pharsesvoc.add(new vocabulary("What's your name ?","tinnә oyaase'nә ?"));
-        Pharsesvoc.add(new vocabulary("My name is ...", "oyaaset..."));
-        Pharsesvoc.add(new vocabulary("How are you feeling ?", "michәksәs?"));
-        Pharsesvoc.add(new vocabulary("Iam feeling good", "kuchi achit"));
-        Pharsesvoc.add(new vocabulary("Are you coming ?", "әәnәs'aa?"));
-        Pharsesvoc.add(new vocabulary("Yeah iam coming ", "hәә’ әәnәm"));
-        Pharsesvoc.add(new vocabulary(" iam coming ", "әәnәm"));
-        Pharsesvoc.add(new vocabulary(" Let's Go ", "yoowutis"));
-        Pharsesvoc.add(new vocabulary("come here", "әnni'nem"));
+        ArrayList<TotalVocabulary>Pharsesvoc = new ArrayList<TotalVocabulary>();
+        Pharsesvoc.add(new TotalVocabulary("Where are you going ?","minto wuksus ?"));
+        Pharsesvoc.add(new TotalVocabulary("What's your name ?","tinnә oyaase'nә ?"));
+        Pharsesvoc.add(new TotalVocabulary("My name is ...", "oyaaset..."));
+        Pharsesvoc.add(new TotalVocabulary("How are you feeling ?", "michәksәs?"));
+        Pharsesvoc.add(new TotalVocabulary("Iam feeling good", "kuchi achit"));
+        Pharsesvoc.add(new TotalVocabulary("Are you coming ?", "әәnәs'aa?"));
+        Pharsesvoc.add(new TotalVocabulary("Yeah iam coming ", "hәә’ әәnәm"));
+        Pharsesvoc.add(new TotalVocabulary(" iam coming ", "әәnәm"));
+        Pharsesvoc.add(new TotalVocabulary(" Let's Go ", "yoowutis"));
+        Pharsesvoc.add(new TotalVocabulary("come here", "әnni'nem"));
 
-        TemplateAdapter PharsesAdapter = new TemplateAdapter(this , Pharsesvoc);
+        WordAdapter PharsesAdapter = new WordAdapter(this , Pharsesvoc,R.color.category_phrases);
         ListView listView = (ListView) findViewById(R.id.PharsesList);
         listView.setAdapter(PharsesAdapter);
 

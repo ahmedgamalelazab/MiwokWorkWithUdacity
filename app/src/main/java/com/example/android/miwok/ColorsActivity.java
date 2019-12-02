@@ -40,7 +40,7 @@ public class ColorsActivity extends AppCompatActivity {
         ColorsList.add(new TotalVocabulary("Dusty Yellow","ṭopiisә",R.drawable.color_dusty_yellow));
         ColorsList.add(new TotalVocabulary("Mustard Yellow","chiwiiṭә",R.drawable.color_mustard_yellow));
 
-        WordAdapter ColorsAdapter = new WordAdapter(this  , ColorsList);
+        WordAdapter ColorsAdapter = new WordAdapter(this  , ColorsList,R.color.category_colors);
 
 
         ListView listView  = (ListView) findViewById(R.id.ColorsLit);

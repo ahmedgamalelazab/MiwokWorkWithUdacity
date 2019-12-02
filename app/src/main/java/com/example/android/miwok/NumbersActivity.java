@@ -66,7 +66,7 @@ public class NumbersActivity extends AppCompatActivity {
         //vocabularyArrayList.add(new vocabulary("Ten","na’aacha"));
         //ArrayAdapter<vocabulary> itemsAdapter = new ArrayAdapter<vocabulary>(this, android.R.layout.simple_list_item_1, vocabularies);
         //ArrayAdapter<vocabulary> itemsAdapter = new ArrayAdapter<vocabulary>(this, R.layout.list_item, vocabularies);
-        WordAdapter AdapterConnect = new WordAdapter(this, vocabularyArrayList);
+        WordAdapter AdapterConnect = new WordAdapter(this, vocabularyArrayList,R.color.category_numbers);
         ListView listView = (ListView) findViewById(R.id.list);
 
         listView.setAdapter(AdapterConnect);
