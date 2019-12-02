@@ -17,6 +17,9 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class PhrasesActivity extends AppCompatActivity {
 
@@ -24,5 +27,23 @@ public class PhrasesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phrases);
+
+        ArrayList<vocabulary>Pharsesvoc = new ArrayList<vocabulary>();
+        Pharsesvoc.add(new vocabulary("Where are you going ?","minto wuksus ?"));
+        Pharsesvoc.add(new vocabulary("What's your name ?","tinnә oyaase'nә ?"));
+        Pharsesvoc.add(new vocabulary("My name is ...", "oyaaset..."));
+        Pharsesvoc.add(new vocabulary("How are you feeling ?", "michәksәs?"));
+        Pharsesvoc.add(new vocabulary("Iam feeling good", "kuchi achit"));
+        Pharsesvoc.add(new vocabulary("Are you coming ?", "әәnәs'aa?"));
+        Pharsesvoc.add(new vocabulary("Yeah iam coming ", "hәә’ әәnәm"));
+        Pharsesvoc.add(new vocabulary(" iam coming ", "әәnәm"));
+        Pharsesvoc.add(new vocabulary(" Let's Go ", "yoowutis"));
+        Pharsesvoc.add(new vocabulary("come here", "әnni'nem"));
+
+        TemplateAdapter PharsesAdapter = new TemplateAdapter(this , Pharsesvoc);
+        ListView listView = (ListView) findViewById(R.id.PharsesList);
+        listView.setAdapter(PharsesAdapter);
+
+
     }
 }
